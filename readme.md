@@ -16,7 +16,10 @@ bindsym $mod+b exec $home/bin/keypress
 ```
 
 ## Setup uinput permissions
-The file /dev/uinput must have the correct permissions
+The file /dev/uinput must belong to the `input` group
+```bash
+sudo chown root:input /dev/uinput
+```
 
 ### Load the uinput module
 ```bash
