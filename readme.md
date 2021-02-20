@@ -32,5 +32,5 @@ sudo groupadd input
 sudo usermod -a -G input $(whoami)
 sudo udevadm control --reload-rules
 echo "SUBSYSTEM==\"misc\", KERNEL==\"uinput\", GROUP=\"input\", MODE=\"0660\"" | sudo tee /etc/udev/rules.d/uinput.rules
-echo input | sudo tee /etc/modules-load.d/uinput.conf
+echo uinput | sudo tee /etc/modules-load.d/uinput.conf
 ```
